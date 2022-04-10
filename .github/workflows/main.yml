@@ -4,12 +4,35 @@ on:
   push:
     branches: [ master ]
 
+# jobs:
+#   run_tests:
+#     runs-on: macos-11
+#     steps:
+#     - uses: actions/checkout@v1
+#     - name: Use Xcode
+#       run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+#     - name: Run tests
+#       run: xcodebuild test -scheme MusicalRoomUITests -project MusicalRoom.xcodeproj -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12' | xcpretty && exit ${PIPESTATUS[0]}
+
 jobs:
-  run_tests:
-    runs-on: macos-11
+  buildAndTest:
+    runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Xcode
-      run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: Pods
+        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-pods-
+    - name: CocoaPod Install
+      run: pod install
+      
     - name: Run tests
       run: xcodebuild test -scheme MusicalRoomUITests -project MusicalRoom.xcodeproj -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12' | xcpretty && exit ${PIPESTATUS[0]}
+
+#     - name: Build
+#       run: xcodebuild -workspace YourAppName.xcworkspace -scheme YourAppName -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
+#     - name: Test
+#       run: xcodebuild -workspace YourAppName.xcworkspace -scheme YourAppName -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12' test
+      
