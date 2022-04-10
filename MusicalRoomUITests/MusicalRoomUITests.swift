@@ -9,16 +9,17 @@ import XCTest
 
 class MusicalRoomUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        continueAfterFailure = false
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+//    override func setUpWithError() throws {
+//        continueAfterFailure = false
+//    }
+//
+//    override func tearDownWithError() throws {
+//        // Put teardown code here. This method is called after the invocation of each test method in the class.
+//    }
     
     // Scenario 1
     func testShouldCreateReservation() {
+        sleep(20)
 //        let app = XCUIApplication()
 //        app.launch()
 //        
@@ -55,6 +56,7 @@ class MusicalRoomUITests: XCTestCase {
     
     // Scenario 2
     func testShouldNotCreateReservation() {
+        sleep(25)
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -89,8 +91,9 @@ class MusicalRoomUITests: XCTestCase {
 //        XCTAssertEqual(app.alerts.element.label, "It seems like you've entered incorrect date")
     }
 //
-//    // Scenario 3
-//    func testShouldDeleteReservation() {
+    // Scenario 3
+    func testShouldDeleteReservation() {
+        sleep(20)
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -122,10 +125,11 @@ class MusicalRoomUITests: XCTestCase {
 //        sleep(5)
 //        let rowCountAfter = app.tables.cells.count
 //        XCTAssertEqual(rowCountAfter, rowCountBefore-1)
-//    }
-//
-//    // Scenario 4
-//    func testShouldChangeStatusLabel() {
+    }
+
+    // Scenario 4
+    func testShouldChangeStatusLabel() {
+        sleep(20)
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -156,10 +160,11 @@ class MusicalRoomUITests: XCTestCase {
 //        sleep(2)
 //        let cell = tableCellContainer.staticTexts["Confirmed"]
 //        XCTAssert(cell.exists)
-//    }
-//
-//    // Scenario 5
-//    func testShouldAddRoom() {
+    }
+
+    // Scenario 5
+    func testShouldAddRoom() {
+        sleep(25)
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -198,10 +203,11 @@ class MusicalRoomUITests: XCTestCase {
 //        app.buttons["Add Room"].tap()
 //
 //        XCTAssertEqual(app.alerts.element.label, "Room was added successfully")
-//    }
+    }
 //
-//    // Scenario 6
-//    func testShouldNotAddRoom() {
+    // Scenario 6
+    func testShouldNotAddRoom() {
+        sleep(20)
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -239,10 +245,11 @@ class MusicalRoomUITests: XCTestCase {
 //        app.buttons["Add Room"].tap()
 //
 //        XCTAssertEqual(app.alerts.element.label, "Ooops!")
-//    }
-//
-//    // Scenario 7
-//    func testShouldDeleteRoom() {
+    }
+
+    // Scenario 7
+    func testShouldDeleteRoom() {
+        sleep(25)
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -273,10 +280,11 @@ class MusicalRoomUITests: XCTestCase {
 //        sleep(5)
 //        let rowCountAfter = app.tables.cells.count
 //        XCTAssertEqual(rowCountAfter, rowCountBefore-1)
-//    }
-//
-//    // Scenario 8
-//    func testShouldAddInstrument() {
+    }
+
+    // Scenario 8
+    func testShouldAddInstrument() {
+        sleep(25)
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -311,10 +319,11 @@ class MusicalRoomUITests: XCTestCase {
 //        app.buttons["Add Instrument"].tap()
 //
 //        XCTAssertEqual(app.alerts.element.label, "Instrument was added successfully")
-//    }
-//
-//    // Scenario 9
-//    func testShouldNotAddInstrument() {
+    }
+
+    // Scenario 9
+    func testShouldNotAddInstrument() {
+        sleep(30)
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -348,10 +357,11 @@ class MusicalRoomUITests: XCTestCase {
 //        app.buttons["Add Instrument"].tap()
 //
 //        XCTAssertEqual(app.alerts.element.label, "Ooops!")
-//    }
-//
-//    // Scenario 10
-//    func testShouldDeleteInstrument() {
+    }
+
+    // Scenario 10
+    func testShouldDeleteInstrument() {
+        sleep(25)
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -382,5 +392,5 @@ class MusicalRoomUITests: XCTestCase {
 //        sleep(5)
 //        let rowCountAfter = app.tables.cells.count
 //        XCTAssertEqual(rowCountAfter, rowCountBefore-1)
-//    }
+    }
 }
