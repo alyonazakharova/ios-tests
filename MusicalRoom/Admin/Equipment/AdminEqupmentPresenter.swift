@@ -67,12 +67,12 @@ class AdminEquipmentPresenter: AdminEquipmentPresenterProtocol {
         }
         task.resume()
         
-        group.notify(queue: .main) { [weak self] in
-            if (self?.errorOccured != nil && self?.errorOccured == true) {
-                self?.view?.showAlert(title: "Oops. Something went wrong")
-                return
-            }
-            self?.view?.showAlert(title: "Instrument was successfully added to the room")
-        }
+//        group.notify(queue: .main) { [weak self] in
+//            if (self?.errorOccured != nil && self?.errorOccured == true) {
+//                self?.view?.showAlert(title: "Oops. Something went wrong")
+//                return
+//            }
+//            self?.view?.showAlert(title: "Instrument was successfully added to the room")
+//        }
     }
 }
