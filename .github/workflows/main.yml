@@ -28,11 +28,8 @@ jobs:
     - name: CocoaPod Install
       run: pod install
       
-    - name: Run tests
-      run: xcodebuild test -scheme MusicalRoomUITests -project MusicalRoom.xcodeproj -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12' | xcpretty && exit ${PIPESTATUS[0]}
-
-#     - name: Build
-#       run: xcodebuild -workspace YourAppName.xcworkspace -scheme YourAppName -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
-#     - name: Test
-#       run: xcodebuild -workspace YourAppName.xcworkspace -scheme YourAppName -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12' test
+    - name: Build
+      run: xcodebuild -workspace MusicalRoom.xcworkspace -scheme MusicalRoom -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
+    - name: Test
+      run: xcodebuild -workspace MusicalRoom.xcworkspace -scheme MusicalRoomUITests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12' test
       
