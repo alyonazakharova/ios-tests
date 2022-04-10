@@ -53,8 +53,8 @@ class MusicalRoomUITests: XCTestCase {
 //        XCTAssertEqual(app.alerts.element.label, "Woohoo. You successfully reserved a room")
     }
     
-//    // Scenario 2
-//    func testShouldNotCreateReservation() {
+    // Scenario 2
+    func testShouldNotCreateReservation() {
 //        let app = XCUIApplication()
 //        app.launch()
 //
@@ -87,7 +87,7 @@ class MusicalRoomUITests: XCTestCase {
 //        app.buttons.containing(.staticText, identifier:"Reserve").element.tap()
 //
 //        XCTAssertEqual(app.alerts.element.label, "It seems like you've entered incorrect date")
-//    }
+    }
 //
 //    // Scenario 3
 //    func testShouldDeleteReservation() {
