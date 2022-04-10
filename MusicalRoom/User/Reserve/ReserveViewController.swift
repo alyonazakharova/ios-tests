@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import DropDown
+import DropDown
 
 class ReserveViewController: UIViewController, ReservePresenterDelegate {
     private let presenter = ReservePresenter()
@@ -37,7 +37,7 @@ class ReserveViewController: UIViewController, ReservePresenterDelegate {
         let button = UIButton()
         button.setTitle("Select Room", for: .normal)
         button.setTitleColor(.black, for: .normal)
-//        button.addTarget(self,action: #selector(selectRoomButtonTapped),for: .touchUpInside)
+        button.addTarget(self,action: #selector(selectRoomButtonTapped),for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -74,7 +74,7 @@ class ReserveViewController: UIViewController, ReservePresenterDelegate {
         return button
     }()
     
-//    let dropDown = DropDown()
+    let dropDown = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad() 
@@ -84,16 +84,16 @@ class ReserveViewController: UIViewController, ReservePresenterDelegate {
         presenter.setViewDelegate(delegate: self)
         presenter.getRooms()
         
-//        dropDown.anchorView = roomView
-//
-//        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
-//        dropDown.topOffset = CGPoint(x: 0, y:-(dropDown.anchorView?.plainView.bounds.height)!)
-//        dropDown.direction = .bottom
-//        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-//            print("Selected item: \(item) at index: \(index)")
-//            self.selectRoomButton.setTitle(roomsNames[index], for: .normal)
-//            selectedRoom = rooms[index]
-//        }
+        dropDown.anchorView = roomView
+
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.topOffset = CGPoint(x: 0, y:-(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.direction = .bottom
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            self.selectRoomButton.setTitle(roomsNames[index], for: .normal)
+            selectedRoom = rooms[index]
+        }
     }
     
     func setBackground(){
@@ -145,10 +145,10 @@ class ReserveViewController: UIViewController, ReservePresenterDelegate {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonTapped))
         toolBar.setItems([doneButton], animated: true)
         
-//        dateField.inputAccessoryView = toolBar
-//        dateField.inputView = datePicker
-//        datePicker.datePickerMode = .date
-//        datePicker.preferredDatePickerStyle = .wheels
+        dateField.inputAccessoryView = toolBar
+        dateField.inputView = datePicker
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
         
         // RESERVE BUTTON
         view.addSubview(reserveButton)
@@ -164,21 +164,21 @@ class ReserveViewController: UIViewController, ReservePresenterDelegate {
         reserveButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     
-//    func fillDropDown() {
-//        roomsNames = rooms.map { $0.name }
-//        dropDown.dataSource = roomsNames
-//    }
-//
-//    @objc private func selectRoomButtonTapped() {
-//        dropDown.show()
-//    }
+    func fillDropDown() {
+        roomsNames = rooms.map { $0.name }
+        dropDown.dataSource = roomsNames
+    }
+
+    @objc private func selectRoomButtonTapped() {
+        dropDown.show()
+    }
     
     func presentRooms(rooms: [RoomModel]) {
-//        self.rooms = rooms
-//
-//        DispatchQueue.main.async {
-//            self.fillDropDown()
-//        }
+        self.rooms = rooms
+
+        DispatchQueue.main.async {
+            self.fillDropDown()
+        }
     }
     
     @objc private func doneButtonTapped() {
