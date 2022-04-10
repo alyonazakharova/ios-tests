@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KiC-Uu-Fno">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wpO-al-AlI">
+            <objects>
+                <tabBarController storyboardIdentifier="adminTabBar" id="0EU-79-kNd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y0J-Al-Ptv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mED-DS-3A1" kind="relationship" relationship="viewControllers" id="g3b-fg-dNg"/>
+                        <segue destination="apP-lZ-Po9" kind="relationship" relationship="viewControllers" id="0Jb-Kq-tTb"/>
+                        <segue destination="FwB-MT-F1k" kind="relationship" relationship="viewControllers" id="r58-N2-t21"/>
+                        <segue destination="ldk-ga-p6E" kind="relationship" relationship="viewControllers" id="U42-gk-HY6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEL-pX-rbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6110" y="-1436"/>
+        </scene>
+        <!--Instruments-->
+        <scene sceneID="s0Q-VK-gzU">
+            <objects>
+                <navigationController id="FwB-MT-F1k" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Instruments" image="instruments-icon" id="A2F-u5-1cB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yZW-XB-rbJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pel-2J-v52" kind="relationship" relationship="rootViewController" id="DlY-h8-hrx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OoF-Vu-LOv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5781" y="-621"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="yol-2V-rtd">
+            <objects>
+                <viewController id="wW8-Yk-edW" customClass="HomeViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5f1-a4-ju0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8ES-Ii-M6b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4n-x1-UVq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9283" y="-1146"/>
+        </scene>
+        <!--Reserve-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reserve" id="WT5-OP-xWh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="124"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="UqP-cr-Vfa">
+            <objects>
+                <viewController storyboardIdentifier="loginVC" id="tpC-Mu-ma1" customClass="LoginViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sg1-z9-Cz8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wQw-zS-euw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qR-ny-haF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="124"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nWf-jE-sml">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" id="37a-0T-gy8" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Ne-cx-iYZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nnB-cL-Xfk" kind="relationship" relationship="viewControllers" id="EB3-N7-7Rc"/>
+                        <segue destination="Xsg-7X-P2o" kind="relationship" relationship="viewControllers" id="Jhz-XT-Tgz"/>
+                        <segue destination="snv-0F-ynu" kind="relationship" relationship="viewControllers" id="511-3b-Fii"/>
+                        <segue destination="b5L-Li-uqS" kind="relationship" relationship="viewControllers" id="d6y-ag-sU3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ur-fx-cw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="895"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XLd-qt-uOF">
+            <objects>
+                <navigationController id="KiC-Uu-Fno" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GkR-5L-Epl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="N8Z-Cd-htG" kind="relationship" relationship="rootViewController" id="Fo1-6i-p6z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAF-s1-zO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4025" y="818"/>
+        </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="PNl-of-YHz">
+            <objects>
+                <viewController id="N8Z-Cd-htG" customClass="InitialViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n16-lw-UgR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bsw-Xn-B0Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2kx-UA-3Xz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buP-vy-s1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3094" y="818"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="iZp-dr-qCh">
+            <objects>
+                <viewController id="oG7-hd-5Ly" customClass="TestViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t3W-sn-bO0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="left" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="d2b-V7-VHJ">
+                                <rect key="frame" x="40" y="292" width="334" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ONp-fx-r1w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tWg-k5-LzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2343.4782608695655" y="1899.7767857142856"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="bED-gj-HAj">
+            <objects>
+                <navigationController id="nnB-cL-Xfk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home-icon" id="XOt-NM-ojc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GZT-UP-4cP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M5g-LQ-uY8" kind="relationship" relationship="rootViewController" id="I4Y-B4-1Oa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4b-jc-kbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-642" y="1700"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="AbE-XY-kQn">
+            <objects>
+                <viewController id="M5g-LQ-uY8" customClass="HomeViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qvd-rc-xKu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Uzn-9S-PD6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="Cdg-Eq-Z2C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsk-Eo-iHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-651" y="2413"/>
+        </scene>
+        <!--Equipment-->
+        <scene sceneID="tda-68-ujv">
+            <objects>
+                <navigationController id="Xsg-7X-P2o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Equipment" image="equipment-icon" id="azi-mC-dg6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JMi-Dw-eYG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wrh-SM-Pgc" kind="relationship" relationship="rootViewController" id="swO-Fc-1df"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yj-0Y-ae7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="1700"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="tSi-kn-dGz">
+            <objects>
+                <navigationController id="snv-0F-ynu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile-icon" id="pff-Jm-Eb9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="koU-N1-yff">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7B2-ey-Smy" kind="relationship" relationship="rootViewController" id="IsD-Gu-0Hv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sf3-J7-saU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="1700"/>
+        </scene>
+        <!--Reserve-->
+        <scene sceneID="c5j-hK-iDP">
+            <objects>
+                <navigationController id="b5L-Li-uqS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reserve" image="reserve-icon" id="cBh-zE-Tpn"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UOc-z6-Ygb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mgH-aU-ATq" kind="relationship" relationship="rootViewController" id="XRx-ie-8nH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ps0-qO-LyR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1426" y="1700"/>
+        </scene>
+        <!--Reserve-->
+        <scene sceneID="Fzy-uD-pzD">
+            <objects>
+                <viewController id="mgH-aU-ATq" customClass="ReserveViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WuQ-4O-EYh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iIi-zz-i9P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reserve" id="B2k-Bg-hG4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGj-k2-L1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="2413"/>
+        </scene>
+        <!--Equipment-->
+        <scene sceneID="9Lp-15-b8n">
+            <objects>
+                <viewController id="Wrh-SM-Pgc" customClass="EquipmentViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dmG-yv-oVE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vxt-x6-uQ0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Equipment" id="30d-Wb-2cz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhc-hv-mpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="2413"/>
+        </scene>
+        <!--Room Equipment View Controller-->
+        <scene sceneID="XRd-Fq-xO5">
+            <objects>
+                <viewController storyboardIdentifier="roomEquipmentVC" id="miB-Kb-yn8" customClass="RoomEquipmentViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yxE-3w-h5A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="W43-HM-CfB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LxA-vy-esG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="741-56-et9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="3168.75"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Hga-kv-dod">
+            <objects>
+                <viewController id="7B2-ey-Smy" customClass="ProfileViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="erB-ew-cjL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gxR-wO-rjE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="xY3-bV-1Im"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="maA-IA-I7i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="2413"/>
+        </scene>
+        <!--Rooms-->
+        <scene sceneID="6Pb-ij-7Wy">
+            <objects>
+                <navigationController id="apP-lZ-Po9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rooms" image="rooms-icon" id="tXx-Pi-qnB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YF3-Al-EWM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7tq-8o-vyM" kind="relationship" relationship="rootViewController" id="j1o-NP-8rm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6O-Ir-f1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6486" y="-621"/>
+        </scene>
+        <!--Reservations-->
+        <scene sceneID="Ppi-Na-GEW">
+            <objects>
+                <navigationController id="mED-DS-3A1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reservations" image="reservations-icon" id="s8C-2z-zi1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c5L-r9-kav">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fpx-Fp-wck" kind="relationship" relationship="rootViewController" id="Pfg-1Q-t3p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCg-9J-YbD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7175" y="-621"/>
+        </scene>
+        <!--Reservations-->
+        <scene sceneID="fHK-DG-Bm7">
+            <objects>
+                <viewController id="fpx-Fp-wck" customClass="ReservationViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dtH-cz-SIa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kBl-T0-gud"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reservations" id="8mE-Zf-spb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3d-dS-9nW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7175" y="165"/>
+        </scene>
+        <!--Equipment-->
+        <scene sceneID="tjO-AC-yMt">
+            <objects>
+                <navigationController id="ldk-ga-p6E" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Equipment" image="admin-equipment-icon" id="vCo-mL-nbf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gSg-pk-cqE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="V6K-tA-NEa" kind="relationship" relationship="rootViewController" id="etp-7w-i7B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gv6-wO-6vj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5099" y="-621"/>
+        </scene>
+        <!--Rooms-->
+        <scene sceneID="Rpq-sn-Sby">
+            <objects>
+                <viewController id="7tq-8o-vyM" customClass="RoomsViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gls-NJ-daS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RLB-Gr-cTz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rooms" id="fEp-pm-snh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUu-zG-x8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6487" y="165"/>
+        </scene>
+        <!--Instruments-->
+        <scene sceneID="XeS-Qf-p6D">
+            <objects>
+                <viewController id="pel-2J-v52" customClass="InstrumentsViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nd8-og-aze">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="t6r-V2-8d2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Instruments" id="JAF-Nx-75b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZX-Pf-goj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5781" y="165"/>
+        </scene>
+        <!--Equipment-->
+        <scene sceneID="ZtU-Fw-6b8">
+            <objects>
+                <viewController id="V6K-tA-NEa" customClass="AdminEquipmentViewController" customModule="MusicalRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="72K-PW-yK5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1yP-oa-RbM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Equipment" id="sNk-1T-Sg8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZT-0P-fZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5100" y="165"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="admin-equipment-icon" width="30" height="30"/>
+        <image name="equipment-icon" width="16" height="19"/>
+        <image name="home-icon" width="16" height="18"/>
+        <image name="instruments-icon" width="30" height="30"/>
+        <image name="profile-icon" width="22" height="22"/>
+        <image name="reservations-icon" width="29" height="30"/>
+        <image name="reserve-icon" width="15" height="20"/>
+        <image name="rooms-icon" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
